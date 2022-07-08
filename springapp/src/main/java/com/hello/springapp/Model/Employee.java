@@ -1,4 +1,4 @@
-package com.hello.springapp.Employee1;
+package com.hello.springapp.Model;
 
 
 
@@ -15,7 +15,7 @@ import lombok.Data;
 @Entity
 @Table(name="employee1")
 
-public class Emp {
+public class Employee {
 	@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
 	private long id;
