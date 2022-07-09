@@ -12,7 +12,6 @@ import com.hello.springapp.Service.EmployeeService;
 
 @RestController
 @RequestMapping("/api/employees")
-
 public class EmployeeController {
 	
 	private EmployeeService employeeService;
@@ -24,7 +23,12 @@ public class EmployeeController {
 	}
 	@PostMapping()
 	public ResponseEntity<Employee>saveEmployee(@RequestBody Employee employee){
-		return new ResponseEntity<Employee>(employeeService.saveEmployee(employee),HttpStatus.CREATED);
+		return new ResponseEntity<Employee> (employeeService.saveEmployee((employee),HttpStatus.CREATED));
+		
 	}
+	
+
+	
+	
 
 }

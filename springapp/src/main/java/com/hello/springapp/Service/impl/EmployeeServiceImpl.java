@@ -1,5 +1,6 @@
 package com.hello.springapp.Service.impl;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.hello.springapp.Model.Employee;
@@ -21,6 +22,11 @@ public class EmployeeServiceImpl implements EmployeeService {
 	public Employee saveEmployee(Employee employee) {
 		return employeeRepository.save(employee);
 		
+	}
+	@Override
+	public HttpStatus saveEmployee(Employee employee, HttpStatus created) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	

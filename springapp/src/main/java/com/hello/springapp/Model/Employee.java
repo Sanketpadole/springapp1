@@ -10,17 +10,20 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 import lombok.Data;
+import lombok.NonNull;
 
 @Data
 @Entity
-@Table(name="employee1")
+@Table(name="employee")
+
 
 public class Employee {
 	@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
+
 	private long id;
 	
-	@Column (name="firstname",nullable=false)
+	@Column(name="last_name",nullable=false)
 	private String firstName;
 	
 	@Column(name="last_name")
@@ -28,4 +31,5 @@ public class Employee {
 	
 	@Column (name="email")
 	private String email;
+
 }
